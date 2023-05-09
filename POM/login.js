@@ -17,7 +17,6 @@ export class Login {
   
       // Submit the login form
       await Promise.all([
-        this.page.waitForNavigation(), // Wait for the navigation to complete
         this.page.click("#loginBtn")
       ]);
   

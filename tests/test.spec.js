@@ -2,9 +2,6 @@
 const { test, expect } = require('@playwright/test');
 import { Login } from '../POM/login';
 
-
-
-
 test('has url', async ({ page }) => {
   const login = new Login(page);
   await login.login('29998mikkva_du','ImponerendeFredag62');
