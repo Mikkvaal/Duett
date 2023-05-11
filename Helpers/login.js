@@ -7,7 +7,7 @@ export class Login {
   
     async login(username, password) {
       // Navigate to the login page
-      await this.page.goto("https://rf-systest.duett.no/Duett/Core/FrontEnd/WebApplications/Dashboard");
+      await this.page.goto("https://devteam8.duett.no/Duett/Core/FrontEnd/WebApplications/Dashboard/Home");
 
       this.usertxt = this.page.locator("#usrText");
       this.userpwd = this.page.locator("#pwdText");

@@ -1,7 +1,9 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-import { Login } from '../POM/login';
+import { MenuPicker } from '../Helpers/TopMenuHelpers/menuPicker';
+import { Login } from '../Helpers/login';
 import { Home } from '../POM/Home';
+import { TopMenu } from '../POM/TopMenu';
 
 test.beforeEach(async ({page}) => {
   const login = new Login(page);
@@ -9,14 +11,10 @@ test.beforeEach(async ({page}) => {
 });
 
 test('has url', async ({ page }) => {
+
+  const menuPicker = new MenuPicker(page);
+
+  await menuPicker.menuPicker('asd');
   
-  await expect(page).toHaveURL('https://rf-systest.duett.no/Duett/Core/FrontEnd/WebApplications/Dashboard/Home');
 });
 
-test('click masse', async ({page}) => {
-  const home = new Home(page);
-  await home.bankTrans.click();
-  await home.attestasjon.click();
-  await home.autoTrans.click();
-  await home.lonn.click();
-});
