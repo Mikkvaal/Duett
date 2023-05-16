@@ -1,5 +1,4 @@
-// @ts-check
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 import { MenuPicker } from '../Helpers/TopMenuHelpers/menuPicker';
 import { Login } from '../Helpers/login';
 import { Home } from '../POM/Home';
@@ -14,7 +13,7 @@ test('has url', async ({ page }) => {
 
   const menuPicker = new MenuPicker(page);
 
-  await menuPicker.menuPicker('asd');
+  await menuPicker.menuPicker('Innstillinger');
   
 });
 
