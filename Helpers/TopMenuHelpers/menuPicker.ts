@@ -16,11 +16,10 @@ export class MenuPicker {
         switch (menuChoice) {
             case 'Innstillinger' :
                 await topmenu.instillinger.click();
+                await this.page.waitForSelector("#ddSettingsThemePageContainer > div.rightContainer > div.carriers > div > div.themeCarriersLabel > div");
                 break;
             default :
                 throw new Error(`Invalid menu choice: ${menuChoice}`);
         }
-        
-      await this.page.waitForSelector("#ddSettingsThemePageContainer > div.rightContainer > div.carriers > div > div.themeCarriersLabel > div");
     }
   }
