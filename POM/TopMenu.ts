@@ -23,7 +23,7 @@ export class TopMenu {
         this.company = page.locator('#clName');
         this.clearCompany = page.locator('#ClientSearchClear');
         this.searchCompany = page.locator('#ClientSearch');
-        this.searchCompanyFirstMatch = page.locator('#ClientSearchResultGrid > div.k-grid-content.k-auto-scrollable > div.k-virtual-scrollable-wrap > table > tbody > tr > td.ddColumnWidthClientKey')
+        this.searchCompanyFirstMatch = page.locator('#ClientSearchResultGrid > div.k-grid-content.k-auto-scrollable > div.k-virtual-scrollable-wrap > table > tbody > tr > td.ddColumnWidthClientKey');
 
 
         this.topMenu = page.locator('#topmenu');
