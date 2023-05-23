@@ -12,12 +12,11 @@ export class Login {
     }
 
   
-    async login(username, password) {
+    async login() {
       // Navigate to the login page
       await this.page.goto("https://devteam8.duett.no/Duett/Core/FrontEnd/WebApplications/Dashboard/Home");
-
-      await this.usertxt.fill(username);
-      await this.userpwd.fill(password);
+      await this.usertxt.fill('29998mikkva_du');
+      await this.userpwd.fill('ImponerendeFredag62');
   
       // Submit the login form
       await Promise.all([

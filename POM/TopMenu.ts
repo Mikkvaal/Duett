@@ -11,12 +11,14 @@ export class TopMenu {
     readonly clearCompany: Locator;
     readonly searchCompany: Locator;
     readonly searchCompanyFirstMatch: Locator;
+    readonly topMenuFavourite: Locator;
     
     constructor(page){
         this.page = page;
         
         this.menuIcon = page.locator('#topMenuSettingsIcon');
         this.meldinger = page.locator('#topMenuMessageContainer > div.ddMessagesText');
+        this.topMenuFavourite = page.locator('#topMenuFavouritesList > div');
 
         this.company = page.locator('#clName');
         this.clearCompany = page.locator('#ClientSearchClear');
