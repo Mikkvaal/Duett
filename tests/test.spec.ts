@@ -4,7 +4,7 @@ import { Login } from '../Helpers/login';
 import { Home } from '../POM/Home';
 import { TopMenu } from '../POM/TopMenu';
 import { CompanyPicker } from '../Helpers/TopMenuHelpers/companyPicker';
-import { Instillinger } from '../POM/Menu/Instillinger';
+import { Instillinger } from '../POM/Menu/Instillinger/Instillinger';
 
 test.beforeEach(async ({page}) => {
   const login = new Login(page);
