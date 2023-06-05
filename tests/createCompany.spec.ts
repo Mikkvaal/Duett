@@ -42,4 +42,36 @@ test('Create company', async ({page}) => {
     await opprettNyttFirma.finnesIRegister.check();
     await opprettNyttFirma.startOpprettelseNyttFirma.click();
   })
+
+  await test.step('Step 1: Firma', async () => {
+    await opprettNyttFirma.firmaNavn.fill('testfirma');
+    await opprettNyttFirma.firmaInitialer.fill('tft');
+    await opprettNyttFirma.adresse.fill('firmavegen');
+    await opprettNyttFirma.postnummer.fill('7070');
+    await opprettNyttFirma.poststed.fill('der');
+    await opprettNyttFirma.epost.fill('epost@asd.no');
+    await opprettNyttFirma.orgNr.fill('659642247')
+    await opprettNyttFirma.mvaPliktig.click();
+    await opprettNyttFirma.regnskapstype.click();
+
+    await page.getByRole('option', { name: 'Forretning' }).click();
+    await opprettNyttFirma.foretaksform.click();
+    await page.getByRole('option', {name: 'Borettslag'}).click();
+
+    await opprettNyttFirma.nesteKnapp.click();
+    
+  })
+
+  await test.step('Step2: Kopier fra firma', async () => {
+    await opprettNyttFirma.standardfirma.click();
+    await opprettNyttFirma.baerere.click();
+    await opprettNyttFirma.baerereUtvidet.click();
+    await opprettNyttFirma.oppgave.click();
+    await opprettNyttFirma.aktivitet.click();
+    await opprettNyttFirma.avdeling.click();
+    await opprettNyttFirma.frieBaerere.click();
+    await opprettNyttFirma.kunder.click();
+
+    await opprettNyttFirma.nesteKnapp.click();
+  })
 })
